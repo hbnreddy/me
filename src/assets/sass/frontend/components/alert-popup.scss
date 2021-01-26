@@ -1,0 +1,52 @@
+.modal.alert-popup {
+  .modal-header {
+    padding: 16px;
+    justify-content: center;
+    color: #fff;
+    font-size: 66px;
+
+    &.error {
+      background-color: #fd753b;
+    }
+
+    &.warning {
+      background-color: #fde51e;
+    }
+
+    &.success {
+      background-color: #00fd89;
+    }
+  }
+
+  .alert {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 300;
+
+    .alert-header {
+      font-weight: 500;
+      font-size: 24px;
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+  }
+
+  .modal-footer {
+    text-align: center;
+  }
+
+  .btn-close {
+    width: 100px;
+    background-color: #0c66f1;
+    color: #fff;
+    text-transform: capitalize;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

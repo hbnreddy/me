@@ -1,0 +1,255 @@
+.hotel {
+  padding: 10px !important;
+
+  .hotel-header {
+    display: flex;
+
+    .hotel-image-block {
+      flex: 2;
+
+      img.hotel-image {
+        width: 300px;
+        height: 200px;
+        border-radius: 4px;
+      }
+    }
+
+    .options {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 10px 0 20px;
+
+      .name {
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+
+      .subtitle {
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .rating {
+        .icon {
+          color: #F8A313;
+          font-size: 18px;
+        }
+
+        .rating-badge {
+          background-color: #46A23C;
+          padding: 2px 6px;
+          color: #fff;
+          font-size: 13px;
+          border-radius: 4px;
+          margin: 0;
+        }
+      }
+
+      .nearby {
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .facilities {
+        column-count: 2;
+        margin-bottom: 10px;
+
+        .facility {
+          margin-bottom: 5px;
+          font-weight: 500;
+
+          .icon {
+            color: #666;
+            margin-right: 6px;
+          }
+        }
+      }
+
+
+      .btn-orange {
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      .btn-select-hotel {
+        &.active {
+          background-color: #F8A313;
+          border-color: #F8A313;
+        }
+      }
+    }
+
+    .right-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .price {
+        .amount {
+          font-weight: 700;
+          font-size: 26px;
+          text-align: center;
+
+          .icon {
+            font-size: 18px;
+          }
+        }
+
+        .min-price {
+          display: block;
+          color: #c1c1c1;
+          font-size: 14px;
+        }
+
+        .icon {
+          color: #0c66f1;
+        }
+      }
+    }
+  }
+
+  .hotel-body {
+    padding: 20px 0;
+
+    .btn-blue {
+      border: 1px solid #e6e6e6;
+      padding: 5px 15px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #000;
+      width: 110px;
+
+      &:hover {
+        background-color: #0c6ff1;
+        color: #fff;
+      }
+
+      &.active {
+        color: #fff;
+        background-color: #46A23C;
+      }
+    }
+
+    .card {
+      border: none;
+      margin-bottom: 5px;
+
+      .card-header {
+        padding: 0 10px;
+        background-color: #fff;
+        border-bottom: none;
+        font-size: 1rem;
+        color: #000;
+        cursor: pointer;
+
+        &[aria-expanded="true"] .room-wrap .toggle-icon {
+          transform: rotate(180deg);
+        }
+
+        .room-wrap {
+          border-bottom: 1px dashed #e6e6e6;
+          font-weight: 500;
+
+          &:hover {
+            background-color: #fff;
+          }
+
+          .name {
+            flex-basis: 100px;
+          }
+
+          .type {
+            color: #458AF4;
+            text-transform: capitalize;
+            flex: 1;
+          }
+
+          .guests {
+            flex: 1;
+
+            .icon {
+              color: #BACAE2;
+            }
+
+            .badge {
+              background-color: #E9F6FA;
+              font-size: .7rem;
+              width: 10px;
+              height: 10px;
+            }
+          }
+
+          .pack {
+            flex-basis: 100px;
+            font-size: .9rem;
+            text-transform: capitalize;
+          }
+
+          .toggle-icon {
+            color: #999;
+          }
+        }
+      }
+
+      .card-body {
+        padding: 0 10px 10px;
+      }
+
+      .room-wrap {
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #F5F5F5;
+        }
+
+        .type {
+          color: #060505;
+          flex: 4;
+          font-weight: 500;
+          text-transform: capitalize;
+        }
+
+        .country {
+          flex: 1;
+          text-transform: uppercase;
+          color: #A7A7A7;
+          flex-basis: 60px;
+          font-weight: 500;
+        }
+
+        .refundable {
+          flex: 2;
+          text-transform: capitalize;
+          font-size: .9rem;
+          color: #A7A7A7;
+
+          &.success {
+            color: #46A23C;
+          }
+        }
+
+        .terms {
+          flex: 2;
+          font-size: .9rem;
+          color: #0c6ff1;
+          cursor: pointer;
+        }
+
+        .price {
+          flex: 1;
+          text-align: right;
+          padding: 0 24px;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

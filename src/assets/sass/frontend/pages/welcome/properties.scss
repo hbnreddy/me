@@ -1,0 +1,28 @@
+.properties-wrapper {
+  padding: 4rem 0;
+  border-bottom: 1px solid #dedede;
+
+  .column {
+    text-align: center;
+
+    .column-image {
+      width: 5rem;
+    }
+
+    .column-body {
+      .title {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .desc {
+        width: 80%;
+        margin: 0 auto;
+        color: #666;
+        line-height: 1.2;
+      }
+    }
+  }
+}

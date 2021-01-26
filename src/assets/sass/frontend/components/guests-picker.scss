@@ -1,0 +1,139 @@
+.guests-picker {
+  position: absolute;
+  z-index: 15;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+  top: 100%;
+  margin-top: 6px;
+  min-width: 440px;
+  padding: 0 10px 10px;
+
+  .btn-add-room {
+    color: #176DF2 !important;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .guests-list {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed #ccc;
+    color: #ccc;
+
+    .list {
+      display: flex;
+      align-items: center;
+
+      > div {
+        display: flex;
+        align-items: center;
+      }
+
+      .guest {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #999;
+        color: #999;
+        padding: 2px;
+        width: 25px;
+        height: 18px;
+        font-size: 11px;
+        border-radius: 4px;
+        cursor: pointer;
+        text-transform: capitalize;
+        margin: 1px 5px;
+
+        &.selected {
+          background-color: #0c66f1;
+          color: #fff;
+          border-color: #0c66f1;
+        }
+      }
+    }
+  }
+
+  .rooms-list {
+    .room-row {
+      padding: 12px 0;
+      display: flex;
+
+      .room-type {
+        padding: 0 20px;
+
+        &:hover {
+          cursor: pointer;
+          color: #0c66f1
+        }
+      }
+
+      .room-type-dropdown {
+        position: relative;
+
+        .droplist {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          position: absolute;
+          background: #FFFFFF;
+          border: 1px solid #dddddd;
+          border-radius: 6px;
+          color: #ffffff;
+
+          .dropitem {
+            padding: 4px 12px;
+            border-bottom: 1px solid #FFFFFF;
+
+            a {
+              color: #333333;
+              text-decoration: none;
+
+              &.active {
+                color: #0c66f1
+              }
+            }
+          }
+        }
+      }
+
+      .picked-guests {
+        padding: 0 10px;
+
+        .guest-box {
+          border-radius: 6px;
+          padding: 2px 4px;
+          font-size: 12px;
+          display: inline;
+          border: 1px solid #dddddd;
+        }
+      }
+
+      .room-selector {
+        position: relative;
+
+        .travellers-extended {
+          top: 24px;
+        }
+
+        .btn-guests-selector {
+          padding: 4px 12px;
+          color: #333;
+          font-size: 12px;
+          text-decoration: none;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+
+          &:hover {
+            background-color: #0c66f1;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+}

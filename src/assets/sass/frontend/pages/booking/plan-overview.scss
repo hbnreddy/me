@@ -1,0 +1,161 @@
+.plan-overview {
+  flex: 1;
+  padding: 0 15px;
+
+  .plan-overview-wrapper {
+    width: 33vw;
+    top: 0;
+    padding-bottom: 5px;
+  }
+
+  .tabs-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-tabs {
+      .nav-item {
+        flex-basis: auto;
+      }
+    }
+
+    .actions {
+      .btn-link {
+        color: #0c66f1;
+        padding: 6px 12px;
+        font-size: 16px;
+        border-radius: 6px;
+
+        &:hover {
+          color: #b0b0b0;
+          cursor: pointer;
+        }
+      }
+    }
+}
+
+.rename-input {
+max-width: inherit;
+border: none;
+background: none;
+
+&:focus {
+  border: none;
+  outline: none;
+}
+}
+
+.tab-content {
+.box.box-border {
+  padding: 0;
+}
+
+.plan-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 1px solid #e6e6e6;
+
+  .nav-pills {
+    margin-right: 10px;
+
+    .nav-link {
+      padding: 8px 10px;
+      line-height: 1;
+      color: #adadad;
+
+      &.active {
+        background-color: transparent;
+        color: #0c66f1;
+      }
+    }
+  }
+}
+
+.plan-content {
+  padding: 10px 15px;
+  color: #000;
+
+  .tab-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tab-title {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .travellers-overview {
+    padding: 20px 0;
+    margin: 0;
+
+    .traveller-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      font-weight: 600;
+
+      .left-side {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        i {
+          color: #F8A313;
+          font-size: 17px;
+          margin-right: 12px;
+        }
+      }
+
+      .right-side {
+
+      }
+    }
+  }
+
+  .plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+    &:first-child {
+      padding-top: 15px;
+    }
+
+    .icon {
+      font-size: 18px;
+      color: #0c66f1;
+    }
+  }
+
+  .total-estimate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    padding: 10px;
+    background-color: #e9f6fa;
+  }
+
+  .total-discount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: normal;
+    font-size: 13px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    .text {
+      color: #333333;
+    }
+  }
+}
+}
+}

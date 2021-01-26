@@ -1,0 +1,328 @@
+@import "./search-input-box";
+@import '../../components/dropdown-results';
+
+.schedule-form {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+
+  .form-group {
+    position: relative;
+
+    .icon {
+      position: absolute;
+      left: 15px;
+      top: calc(50% - 14px / 2);
+      font-size: 14px;
+      color: #0C66F1;
+    }
+  }
+
+  .form-control {
+    background-color: #e9f6fa;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+    padding-left: 40px;
+
+    &:focus, &:active {
+      box-shadow: none;
+      border-color: #ced4da;
+    }
+
+    &::placeholder {
+      color: #999;
+      font-weight: 500;
+    }
+  }
+
+  .btn-orange {
+    background-color: #fd753b;
+    color: #fff;
+    font-size: 13px;
+    border-color: #fd753b;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.dropdown-menu {
+  border: 1px solid #ced4da;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  font-weight: 500;
+  right: 0;
+  left: unset;
+
+  &.travellers {
+    margin-bottom: 10px;
+
+    .buttons {
+      font-size: 14px;
+      font-weight: normal;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 5px;
+
+      &:hover, &:active {
+        background-color: transparent;
+        color: #212529;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        a {
+          border: 1px solid #ddd;
+          border-radius: 100%;
+          padding: 3px 6px;
+          text-decoration: none;
+          font-size: 10px;
+          line-height: 1;
+          margin: 0 4px;
+          width: 18px;
+          height: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        span {
+          width: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &.activities-travellers {
+    width: 100%;
+
+    .custom-control {
+      width: inherit;
+      padding-right: 1.5rem;
+
+      i {
+        position: absolute;
+        left: 0;
+        top: calc(50% - 20px / 2);
+        color: #0C66F1;
+        font-size: 14px;
+      }
+
+      label {
+        width: inherit;
+
+        &:before {
+          right: -1.5rem;
+          left: auto;
+        }
+
+        &:after {
+          right: -1.5rem;
+          left: auto;
+        }
+      }
+    }
+  }
+}
+
+.multiselect {
+  min-height: 34px;
+  width: inherit;
+  background-color: #e9f6fa;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  font-size: 13px;
+
+  .multiselect__select {
+    display: none;
+  }
+
+  .multiselect__input {
+    background: transparent;
+    margin-bottom: 0;
+    font-size: 13px;
+    color: #000;
+
+    &::placeholder {
+      color: #abbdcd;
+    }
+  }
+
+  .multiselect__tags {
+    background: transparent;
+    padding: 6px 12px;
+    border: none;
+    min-height: auto;
+    font-size: 13px;
+
+    .multiselect__single {
+      margin-bottom: 0;
+      padding: 0;
+      background: transparent;
+      font-size: 13px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .multiselect__placeholder {
+      margin-bottom: 0;
+    }
+  }
+
+  &.themes-search .multiselect__content-wrapper {
+    margin-top: 28px;
+
+    .multiselect__content {
+      column-count: 2;
+    }
+  }
+
+  .multiselect__content-wrapper {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    width: auto;
+
+    .multiselect__content {
+
+      .multiselect__element {
+        margin-bottom: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        color: #000;
+        font-weight: normal;
+
+        .multiselect__option {
+          min-height: auto;
+          padding: 6px 25px;
+          text-align: center;
+        }
+
+        .multiselect__option--selected {
+          font-weight: normal;
+          color: #fff;
+          background: #0c66f1;
+          border-color: transparent;
+          border-radius: 5px;
+        }
+
+        .multiselect__option--highlight {
+          font-weight: normal;
+          color: #fff;
+          background: #0c66f1;
+          border-color: transparent;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+.month-picker {
+  display: flex;
+
+  .months-content {
+    .month-item {
+      &.disabled {
+        background-color: #d6d6d6;
+
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .year-selector {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px 10px 0;
+  }
+
+  .blue-hover {
+    &:hover {
+      cursor: pointer;
+      color: #0C66F0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search-input-box {
+    .dropdown-results {
+      width: 100%;
+    }
+  }
+
+  .dropdown-menu {
+    &.travellers {
+      width: 100%;
+    }
+  }
+
+  .multiselect.themes-search .multiselect__content-wrapper {
+    width: 100%;
+
+    .multiselect__content {
+      column-count: 1;
+      width: inherit;
+
+      .multiselect__element {
+        .multiselect__option span {
+          display: block;
+          width: inherit;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,599 @@
+.modal {
+  display: block;
+  cursor: default !important;
+
+  .modal-content {
+    max-height: 100%;
+
+    .btn-orange {
+      font-weight: bold;
+      letter-spacing: .6px;
+    }
+
+    .btn-link {
+      padding-bottom: 0;
+      padding-top: 15px;
+    }
+
+    .form-group {
+      position: relative;
+
+      .icon {
+        position: absolute;
+        top: calc(50% - 14px / 2);
+        font-size: 14px;
+        color: #0C66F1;
+
+        &:not(.show-pass-icon) {
+          left: 15px;
+        }
+
+        &.show-pass-icon {
+          right: 15px;
+          cursor: pointer;
+        }
+      }
+
+      .form-control {
+        background-color: #e9f6fa;
+        border-color: rgba(212, 238, 245, .7);
+        font-size: 13px;
+        font-weight: bold;
+        color: #000;
+        padding-left: 40px;
+
+        &:focus, &:active {
+          box-shadow: none;
+          border-color: #ced4da;
+        }
+
+        &::placeholder {
+          color: #abbdcd;
+          font-weight: normal;
+        }
+
+        &[type="password"] {
+          padding-right: 40px;
+        }
+      }
+    }
+
+    .custom-control-label {
+      font-weight: bold;
+      font-size: 13px;
+
+      &::before {
+        border-color: #0C66F1;
+        border-radius: 0;
+        box-shadow: 0 0 2px 0 #0C66F0;
+        top: 2px;
+      }
+
+      &::after {
+        top: 2px;
+      }
+    }
+
+    .custom-control-input:checked ~ .custom-control-label::before {
+      background-color: #0C66F1;
+    }
+
+    .modal-header {
+      border-bottom: none;
+      padding-bottom: 0;
+
+      .close {
+        padding: 5px;
+        margin: 0;
+        color: #fff;
+        background-color: #fd753b;
+        border-radius: 100%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0;
+        text-align: center;
+        text-shadow: none;
+        opacity: 1;
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+
+        span {
+          line-height: 0;
+          font-size: 17px;
+        }
+      }
+    }
+
+    .modal-body {
+      padding: 10px 50px 16px;
+    }
+
+    .modal-footer {
+      border-top: none;
+      display: block;
+      padding: 0 50px 15px;
+      color: #000;
+
+      .bottom-link {
+        padding-top: 15px;
+        border-left: none;
+
+        a {
+          font-weight: bold;
+          color: #0C66F1;
+
+          &:hover, &:focus {
+            text-decoration: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.trip-details, &.cancel-booking, &.cancel-activity {
+    .modal-content {
+      .modal-header {
+        padding: 5px 10px;
+        border-bottom: 1px solid #e6e6e6;
+
+        .modal-title {
+          font-size: 16px;
+        }
+
+        .close {
+          color: #000;
+          background-color: #fff;
+          padding: 0;
+
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .modal-body {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .refund {
+          text-transform: uppercase;
+          color: #46A23C;
+          font-weight: bold;
+          margin-bottom: 15px;
+          padding: 0 20px;
+
+          &.non-refund {
+            color: #DF5757;
+          }
+        }
+
+        .trip {
+          border-bottom: 1px dashed #e6e6e6;
+          border-top: none;
+          padding-bottom: 10px;
+
+          &:hover {
+            cursor: auto;
+            background-color: transparent;
+          }
+
+          .title {
+            cursor: auto;
+          }
+        }
+
+        .btn-orange {
+          font-weight: 500;
+          font-size: 14px;
+        }
+
+        .price-selected {
+          margin-right: 20px;
+
+          > div:first-child {
+            font-weight: 500;
+          }
+
+          > div:last-child {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  &.cancel-booking {
+    .hotel-header {
+      > div:first-child {
+        flex: 1;
+      }
+
+      .room-list {
+        flex: 3;
+      }
+    }
+
+    .rating {
+      margin-right: 0;
+
+      .icon {
+        color: #f8a313;
+        font-size: 18px;
+      }
+
+      .rating-badge {
+        background-color: #46a23c;
+        padding: 2px 6px;
+        color: #fff;
+        font-size: 13px;
+        border-radius: 4px;
+      }
+    }
+
+    .small-col {
+      flex-basis: 60px;
+      margin-right: 10px;
+    }
+
+    .icon-hotel {
+      color: #0c66f1;
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    .name {
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    .room-wrap {
+      .name {
+        font-size: 1rem;
+        color: #999;
+      }
+
+      .type {
+        color: #0c66f1;
+        font-size: 13px;
+      }
+
+      .pack {
+        font-weight: 500;
+        color: #000;
+      }
+
+      .price {
+        font-weight: 500;
+      }
+
+      .terms {
+        font-size: 13px;
+        text-decoration: underline;
+      }
+
+      .guests {
+        .icon {
+          color: #bacae2;
+        }
+
+        .badge {
+          background-color: #e9f6fa;
+          font-size: .7rem;
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      .refund {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &.cancel-activity {
+    .activity {
+      display: flex;
+      padding: 10px 15px;
+      border-bottom: 1px dashed #e5e5e5;
+    }
+
+    .icon {
+      color: #0c66f1;
+      font-size: 36px;
+    }
+
+    .name {
+      font-weight: 500;
+    }
+
+    .subtitle {
+      font-size: 13px;
+    }
+
+    .person {
+      width: 28px;
+      height: 28px;
+      padding: 4px;
+      border-radius: 100%;
+      font-size: 11px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:first-child {
+        background-color: #DDE1F3;
+      }
+
+      &:nth-child(2) {
+        background-color: #DDF3E5;
+      }
+
+      &:last-child {
+        background-color: #F3F2DD;
+      }
+
+      &:not(:first-child) {
+        margin-left: -6px;
+      }
+    }
+
+    .total-estimate.cancel {
+      background-color: #F5F5F5 !important;
+    }
+
+    .btn-wrap {
+      .cancel-btn {
+        .btn {
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  .term-and-conditions {
+    flex: 1;
+    padding: 0 10px 0 30px;
+
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+      font-size: 13px;
+
+      li {
+        margin-bottom: 5px;
+
+        &::before {
+          content: "\2022";
+          color: #0c66f1;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+          font-size: 24px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  .details {
+    padding: 20px 5px 10px;
+
+    .details-wrap {
+      display: flex;
+      margin-bottom: 15px;
+    }
+
+    .details-list {
+      flex: 1;
+      padding: 0 30px 0 10px;
+
+      > div:first-child {
+        padding: 0 20px 10px 10px;
+      }
+
+      .options .option-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+    }
+
+    .total-estimate {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      background-color: #E9F6FA;
+      border-radius: 4px;
+      padding: 10px 20px 10px 10px;
+
+      .total {
+        font-size: 18px;
+        line-height: 1;
+      }
+    }
+  }
+
+  &.term-and-conditions-modal {
+    .modal-header {
+      .modal-title {
+        font-size: 1.10rem;
+      }
+
+      .close {
+        color: #000;
+        background-color: #fff;
+        padding: 0;
+
+        span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .modal-body {
+      padding: 20px 20px 50px;
+
+      .term-and-conditions {
+        padding-bottom: 50px;
+
+        ul {
+          padding-left: 10px;
+        }
+      }
+
+      .btn-orange {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .btn-wrap {
+    display: flex;
+
+    .cancel-btn {
+      width: 50%;
+      padding: 0 30px 0 10px;
+
+      .btn {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+    }
+  }
+
+  .total-estimate.cancel {
+    background-color: #F5F5F5 !important;
+  }
+
+  &.payment-modal {
+    .label {
+      font-weight: 600;
+      font-size: 14px;
+      color: #6c757d;
+      margin-bottom: .25rem;
+    }
+
+    .card-info {
+      .payment-card-type-img {
+        width: 150px;
+        height: auto;
+      }
+    }
+
+    .form-group .form-control {
+      background-color: #fff;
+      border-color: #ddd;
+      padding-left: 1rem;
+      font-weight: 300;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .tabs-wrap .nav-tabs .nav-item {
+      .nav-link {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .icon-check {
+        top: calc(50% - 20px / 2)
+      }
+    }
+  }
+}
+
+.login-with-facebook {
+  background-color: #3B5998;
+  border: 1px solid #3B5998;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 20px;
+
+  &:focus, &:hover {
+    box-shadow: none;
+    color: #fff;
+  }
+}
+
+.login-with-google {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 30px;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.login-with-email {
+  background-color: #fd753b;
+  border: 1px solid #fd753b;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+
+  &:focus, &:hover {
+    box-shadow: none;
+    color: #fff;
+  }
+}
+
+.or {
+  position: relative;
+  height: 1px;
+  background-color: #dedede;
+
+  &.text {
+    margin-bottom: 35px;
+
+    &::after {
+      content: 'or';
+      position: absolute;
+      background-color: #fff;
+      width: 50px;
+      left: calc(50% - 50px / 2);
+      top: calc(50% - 22px / 2);
+      text-align: center;
+      font-weight: bold;
+      color: #000;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .modal-dialog.modal-lg, .modal-dialog.modal-xl {
+    height: 92vh;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .modal {
+    cursor: default !important;
+
+    .modal-content {
+      .modal-body, .modal-footer {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+  }
+}

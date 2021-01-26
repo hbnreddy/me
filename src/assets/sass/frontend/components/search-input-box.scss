@@ -1,0 +1,20 @@
+.search-input-box {
+  position: relative;
+
+  .icon-close {
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 14px / 2);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .input-city {
+    &:focus {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+  }
+}

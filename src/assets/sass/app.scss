@@ -1,0 +1,48 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Global
+@import './global';
+
+@import url('https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css');
+
+// Components
+@import "frontend/components/navbar";
+@import "general";
+@import "frontend/components/footer";
+@import "frontend/components/message-box";
+@import "frontend/components/schedule-form";
+@import "frontend/components/carousel";
+@import "frontend/components/theme-picker";
+@import "frontend/components/story-line";
+@import "frontend/components/story-wall";
+@import "frontend/components/image-gallery";
+@import "frontend/components/modal";
+@import "frontend/components/planner-modal";
+@import "./components/toggle-input";
+
+@import "frontend/pages/auth/index";
+@import "frontend/pages/welcome/index";
+@import "frontend/pages/explore/index";
+@import "frontend/pages/city/index";
+@import "frontend/pages/place/index";
+@import "frontend/pages/access-code/index";
+@import "frontend/pages/booking/index";
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn:focus, .btn:active {
+  box-shadow: none;
+  outline: none;
+}

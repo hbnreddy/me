@@ -1,0 +1,426 @@
+// Global settings
+@import "../../../general";
+
+// Components
+@import "../../components/navbar";
+@import "../../components/schedule-form";
+@import "../../components/footer";
+@import "../../components/carousel";
+@import "../../components/image-gallery";
+@import "../../components/story-line";
+@import "../../components/story-wall";
+@import "../../components/modal";
+@import "../../components/planner-modal";
+@import "../../components/alert-popup";
+
+.loading-circle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #fff;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: cornflowerblue;
+}
+
+.planning {
+  .place-of-interest {
+    .title .back {
+      color: #fd753b;
+
+      i {
+        font-size: 14px;
+      }
+
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+
+    .filter-dropdown-menu {
+      position: relative;
+
+      .btn-theme-picker {
+        border-radius: 6px;
+      }
+
+      .filter-dropdown {
+        position: absolute;
+        right: 0;
+        top: 30px;
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 15px 10px;
+        z-index: 1000;
+        width: 200px;
+        max-height: 400px;
+        overflow-y: auto;
+
+        .card {
+          border: none;
+          margin-bottom: 5px;
+
+          .slider-content {
+            padding: 5px 6px;
+            margin: 12px 0;
+
+            .slider-wrap {
+              padding: 0;
+            }
+
+            label {
+              font-size: 13px;
+              font-weight: normal;
+
+              .icon {
+                color: #6c757d;
+                margin-right: 6px;
+                border-bottom: 1px solid #6c757d;
+              }
+            }
+
+            .route {
+              font-size: 15px;
+            }
+
+            .slider-wrap {
+              .vue-slider-dot-tooltip-top {
+                top: -1px;
+                visibility: visible;
+              }
+
+              .vue-slider-rail {
+                background-color: #DADCE0;
+              }
+
+              .vue-slider-dot {
+                background-color: #0c6ff1;
+                border-radius: 50%;
+
+                &:hover {
+                  cursor: pointer;
+                }
+
+                .vue-slider-dot-handle {
+                  background-color: #0c6ff1;
+                }
+
+                .expanded-tooltip-text {
+                  display: none;
+                }
+
+                &.vue-slider-dot-focus {
+                  .expanded-tooltip-text {
+                    display: block;
+                  }
+                }
+              }
+
+              .vue-slider-dot-tooltip-inner {
+                font-size: 12px;
+
+                &::after {
+                  border-top-color: #0c6ff1;
+                }
+              }
+
+              .vue-slider-process {
+                background-color: #0c6ff1;
+              }
+            }
+          }
+
+          .card-header, .card-header > div {
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2px 0;
+            font-size: 13px;
+            border-bottom: none;
+            font-weight: bold;
+            flex: 1;
+
+            .custom-checkbox {
+              padding-left: 26px;
+            }
+
+            &[aria-expanded="true"] i {
+              transform: rotate(180deg);
+            }
+          }
+
+          .custom-control-label {
+            font-weight: bold;
+            font-size: 13px;
+
+            &::before {
+              border-color: #000;
+              border-radius: 0;
+              box-shadow: 0 0 2px 0 #000;
+              top: 2px;
+            }
+
+            &::after {
+              top: 2px;
+            }
+          }
+
+          .custom-control-input:checked ~ .custom-control-label::before {
+            border-color: #0C66F1;
+            box-shadow: 0 0 2px 0 #0C66F1;
+          }
+        }
+      }
+
+      /* width */
+      ::-webkit-scrollbar {
+        width: 2px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #000;
+      }
+    }
+  }
+}
+
+.carousel-days {
+  width: 90%;
+
+  .VueCarousel-slide {
+    visibility: visible;
+    flex-basis: 141.143px;
+  }
+
+  .VueCarousel-navigation {
+    .VueCarousel-navigation-button {
+      background: #F5F5F5 !important;
+      padding: 22px 8px !important;
+    }
+
+    .VueCarousel-navigation-prev {
+      left: -14px !important;
+    }
+
+    .VueCarousel-navigation-next {
+      right: -14px !important;
+    }
+  }
+
+  .card {
+    width: 90%;
+    margin: 0 auto;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .active-day {
+    border-bottom: 4px solid #0E65F0;
+  }
+}
+
+.poi {
+  padding: 0 16px 80px;
+
+  .card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2) !important;
+    margin-bottom: 15px;
+  }
+
+  .poi-content {
+    .poi-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+
+      .title {
+        flex: 4;
+        margin-right: 30px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .price {
+        flex: 1;
+        margin-right: 15px;
+        font-size: 16px;
+
+        .card-title, .amount {
+          font-weight: bold;
+          color: #000;
+          text-decoration: none;
+        }
+      }
+
+      //div:last-child {
+      //  flex: 1;
+      //}
+    }
+
+    .poi-description {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 14px;
+      margin-bottom: 25px;
+
+      .item {
+        padding: 3px 15px;
+        border-right: 1px dashed #ccc;
+
+        &:last-child {
+          padding-right: 0;
+          border-right: none;
+        }
+      }
+    }
+
+    .carousel {
+      margin: 0 0 25px 0;
+
+      .card {
+        height: auto;
+
+        .card-img {
+          position: relative;
+
+          .card-img-top {
+            &:hover {
+              cursor: pointer !important;
+            }
+          }
+
+          .indoors {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            background-color: #fff;
+            border-radius: 6px;
+            color: #6cb2eb;
+            line-height: 1;
+            font-size: 15px;
+            padding: 3px 5px;
+            cursor: pointer;
+
+            &:hover {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        .card-body {
+          padding: 10px;
+
+          .flex-body {
+            margin-bottom: 0;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .about {
+      margin-bottom: 25px;
+    }
+
+    .informations {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      > div {
+        flex: 1;
+
+        &:first-child {
+          margin-right: 40px;
+        }
+
+        ul {
+          padding-left: 20px;
+        }
+      }
+    }
+
+    .stories {
+      margin-bottom: 25px;
+    }
+
+    .reviews {
+      margin-bottom: 25px;
+
+      .review-list {
+        .review {
+          margin-bottom: 20px;
+
+          .heading {
+            display: flex;
+            margin-bottom: 15px;
+
+            .avatar img {
+              width: 48px;
+              height: 48px;
+              border-radius: 100%;
+            }
+
+            .name {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .interests-base-places-list {
+      display: flex;
+      flex-wrap: wrap;
+
+      .place {
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin: 0 5px 15px;
+        padding: 10px;
+        width: 22%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 526px) {
+    .poi-content {
+      .theme-list {
+        .theme {
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}

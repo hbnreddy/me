@@ -1,0 +1,162 @@
+.planning {
+  border-bottom: 1px solid #ced4da;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+
+  .planning-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .title {
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 10px 0 0;
+    }
+
+    .multiselect {
+      min-height: auto;
+      background-color: #0C66F1;
+      color: #fff;
+
+      .multiselect__tags {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .multiselect__single {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  .card-body {
+    font-size: 14px;
+    padding: 15px;
+    color: #000;
+
+    .flex-body {
+      display: flex;
+      justify-content: space-between;
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+
+    .card-title, .amount {
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .experience, .review {
+      font-size: 12px;
+    }
+  }
+}
+
+.btn-orange {
+  background-color: #fd753b;
+  color: #fff;
+  font-size: 13px;
+  border-color: #fd753b;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+}
+
+.input-text-number {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 5px 12px;
+  max-width: 50%;
+  color: blue;
+
+  &:focus {
+    border-radius: 6px;
+    outline: none;
+  }
+}
+
+.toggle-checkbox {
+  width: 20px;
+  height: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.loading-circle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #fff;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: cornflowerblue;
+}
+
+.simulate-input {
+  border: 1px solid #eee;
+  padding: 6px 10px;
+  border-radius: 0.25rem;
+}
+
+.filter-item {
+  border: 1px solid #e6e6e6;
+  text-transform: capitalize;
+  border-radius: 6px 6px 0 0;
+  min-width: 95px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.1;
+  position: relative;
+  padding-right: 20px;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 12px / 2);
+    content: '\f107';
+    font-family: 'FontAwesome', sans-serif;
+    border-top: none;
+  }
+}
+
+.dropdown-menu {
+  display: block;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  width: 270px;
+  font-weight: 500;
+  margin-top: 5px;
+  border-color: #e6e6e6;
+
+  .dropdown-item {
+    i {
+      color: #0c66f1;
+    }
+
+    &:hover {
+      i {
+        color: #FFFFFF;
+      }
+    }
+  }
+}

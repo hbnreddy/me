@@ -1,0 +1,148 @@
+.traveller-details {
+  padding: 20px 15px;
+
+  .box {
+    border-radius: 6px;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 10px;
+  }
+
+  .error-message {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .travellers-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dashed #e6e6e6;
+
+    .nav-tabs {
+      border-bottom: none;
+      padding-bottom: 12px;
+
+      .nav-item {
+        margin-right: 16px;
+
+        a {
+          font-weight: 400;
+          padding: 2px 10px;
+          font-size: 12px;
+          border-radius: 6px;
+          color: #333333;
+          border: 1px solid #dadada;
+
+          &.active {
+            font-weight: 400;
+            cursor: none;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &.active, &:hover {
+            background-color: #0C66F1;
+            color: #ffffff;
+          }
+
+          &.completed {
+            text-transform: uppercase;
+            background-color: #23c86d;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  .traveller-form-block {
+    padding: 20px 0;
+
+    .traveller-form {
+      padding: 0 20px;
+
+      .form-group {
+        margin-bottom: 0.5rem;
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      input, select {
+        border-radius: 6px;
+
+        &::placeholder {
+          color: #8F8F8F;
+        }
+      }
+
+      .small-input {
+        max-width: 175px;
+      }
+
+      .custom-select.form-control-sm {
+        height: calc(1.5em + 0.5rem + 2px);
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+
+        & + i {
+          right: 15px;
+          position: absolute;
+          top: 10px;
+          font-weight: 600;
+        }
+      }
+
+      label {
+        color: #8F8F8F;
+        text-align: left;
+        font-weight: 500;
+
+      }
+
+      .mobile-input {
+        display: flex;
+
+        select {
+          flex: 1 !important;
+          margin-right: 4px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        input {
+          flex: 6 !important;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+
+      .btn-add-traveller {
+        color: #333;
+        border-color: #b6b7b7;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 13px;
+        margin: 16px 0;
+
+        &:hover {
+          color: #FFFFFF;
+        }
+      }
+
+      .section-title {
+        color: #1068F1;
+        padding: 12px 0;
+        font-weight: 500;
+      }
+    }
+  }
+}
