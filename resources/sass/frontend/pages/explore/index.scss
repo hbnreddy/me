@@ -1,0 +1,205 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import url('https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css');
+
+// Global settings
+@import "./../../../general";
+
+// Components
+@import "../../components/navbar";
+@import "../../components/schedule-form";
+@import "../../components/theme-picker";
+@import "../../components/footer";
+@import "../../components/carousel";
+@import "../../components/image-gallery";
+@import "./../../../components/toggle-input";
+
+@import "../../components/modal";
+@import "../../pages/city/index";
+
+.explore-page {
+  .planning {
+    border-bottom: 1px solid #ced4da;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+
+    .planning-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .title {
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0 10px 0 0;
+      }
+
+      .multiselect {
+        min-height: auto;
+        background-color: #0C66F1;
+        color: #fff;
+
+        .multiselect__tags {
+          padding-left: 20px;
+          padding-right: 20px;
+
+          .multiselect__single {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    padding: 0 16px 0 16px;
+
+    .card {
+      margin-bottom: 15px;
+      box-shadow: none;
+      border: none;
+      position: relative;
+
+      .card-body {
+        color: #000;
+        padding: 1rem 0;
+
+        .header {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+        }
+
+        .card-title {
+          font-weight: 500;
+          font-size: 1rem;
+          margin-bottom: 5px;
+
+          a {
+            color: #000;
+          }
+        }
+
+        .subtitle {
+          font-size: 13px;
+          margin-bottom: 5px;
+          color: #444;
+
+          i {
+            font-size: 8px;
+          }
+        }
+
+        .prices {
+          font-weight: 500;
+          color: #000;
+          display: flex;
+          align-items: center;
+
+          i {
+            min-width: 20px;
+          }
+        }
+
+        .card-text {
+          font-size: 12px;
+          font-weight: 500;
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+
+          .label {
+            color: #444;
+            font-size: 13px;
+            font-weight: normal;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      &.explored::after {
+        content: 'Added';
+        position: absolute;
+        left: 0;
+        top: 15px;
+        background-color: #FD753B;
+        color: #fff;
+        font-size: 13px;
+        padding: 4px 14px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+
+      &.city-card {
+        min-height: 360px;
+
+        .image-hover {
+          .weather-card {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            width: 85px;
+            background-color: #6c839e;
+            color: #fff;
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            i {
+              font-size: 18px;
+              color: #aeeafe;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        img.card-img-top {
+          height: 200px;
+          opacity: 1;
+          transition: opacity 0.3s;
+          object-fit: cover;
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+        }
+
+        img.card-img-top[data-src] {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .planning {
+      .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+    .content {
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .planning {
+      .planning-content {
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .content {
+      padding: 0;
+    }
+  }
+}

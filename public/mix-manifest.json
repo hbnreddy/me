@@ -1,0 +1,17 @@
+{
+    "/js/admin-app.js": "/js/admin-app.js",
+    "/css/frontend/pages/welcome/index.css": "/css/frontend/pages/welcome/index.css",
+    "/css/frontend/pages/explore/index.css": "/css/frontend/pages/explore/index.css",
+    "/css/frontend/pages/auth/index.css": "/css/frontend/pages/auth/index.css",
+    "/css/frontend/pages/city/index.css": "/css/frontend/pages/city/index.css",
+    "/css/frontend/pages/place/index.css": "/css/frontend/pages/place/index.css",
+    "/css/frontend/pages/booking/index.css": "/css/frontend/pages/booking/index.css",
+    "/css/frontend/pages/access-code/index.css": "/css/frontend/pages/access-code/index.css",
+    "/css/admin/admin-app.css": "/css/admin/admin-app.css",
+    "/js/frontend/pages/auth/index.js": "/js/frontend/pages/auth/index.js",
+    "/js/frontend/pages/booking/index.js": "/js/frontend/pages/booking/index.js",
+    "/js/frontend/pages/checkout/index.js": "/js/frontend/pages/checkout/index.js",
+    "/js/frontend/pages/explore/index.js": "/js/frontend/pages/explore/index.js",
+    "/js/frontend/pages/place/index.js": "/js/frontend/pages/place/index.js",
+    "/js/frontend/pages/welcome/index.js": "/js/frontend/pages/welcome/index.js"
+}

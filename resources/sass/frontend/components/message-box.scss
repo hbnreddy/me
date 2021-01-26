@@ -1,0 +1,29 @@
+.message-box {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  .card {
+    padding: 30px 25px 40px;
+    color: #000;
+    font-size: 16px;
+    flex: 1 0 45%;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .message-box {
+    display: block;
+
+    .card {
+      margin-left: 0;
+    }
+  }
+}

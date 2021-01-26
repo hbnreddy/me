@@ -1,0 +1,98 @@
+.theme-picker {
+  position: absolute;
+  z-index: 9;
+  top: 42px;
+  right: 0;
+  padding: 10px 6px 12px;
+  border: 1px solid #ced4da;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: #ffffff;
+  max-width: 64vw;
+  width: 35vw;
+  min-width: 700px;
+  margin-bottom: 10px;
+
+  .months-list {
+    list-style: none;
+    margin: 0 0 5px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .list-item {
+      flex-basis: 50%;
+      padding: 6px 8px;
+      min-width: 0;
+
+      a {
+        display: block;
+        width: 100%;
+        border-radius: 0.25rem;
+        padding: 4px;
+        border: 1px solid #ddd;
+        color: #212529;
+        text-align: center;
+        justify-content: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:hover {
+          cursor: pointer;
+          background: #0C66F1;
+          color: #ffffff;
+        }
+      }
+
+      &.selected {
+        a {
+          background: #0C66F1;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .bottom-buttons {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .theme-picker {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .theme-picker {
+    .months-list {
+      display: block;
+      max-height: 275px;
+      overflow-y: auto;
+
+      .list-item {
+        min-width: auto;
+        width: 100%;
+
+        a {
+          white-space: initial;
+        }
+      }
+    }
+  }
+
+  .explore-page .theme-picker {
+    min-width: 350px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .explore-page .theme-picker {
+    min-width: 80vw;
+    right: calc(50% - 80vw / 2) !important;
+  }
+}

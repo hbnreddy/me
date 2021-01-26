@@ -1,0 +1,323 @@
+.modal-planner {
+  .modal-content {
+    .modal-header {
+      display: none;
+    }
+
+    .modal-body {
+      padding: 20px;
+      display: block;
+      overflow-y: auto;
+      overflow-x: hidden;
+      min-height: 580px;
+
+      .btn {
+        width: 167px;
+        margin: 1px 5px;
+        padding: 8px 10px;
+        line-height: 1;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      .title {
+        font-size: 17px;
+        font-weight: bold;
+        margin-bottom: 35px;
+      }
+
+      .content-wrapper {
+        display: flex;
+        align-items: stretch;
+        min-height: calc(580px - 184px);
+
+        .box {
+          border: 1px solid #d8d8d8;
+          border-radius: 6px;
+
+          .box-heading {
+            padding: 5px 20px;
+            font-size: 15px;
+            font-weight: bold;
+            border-bottom: 1px solid #d8d8d8;
+            display: flex;
+            align-items: center;
+            min-height: 48px;
+          }
+
+          .box-body {
+            padding: 20px 0 10px;
+            max-height: 370px;
+            overflow-y: auto;
+
+            .body-wrap {
+              padding: 0 20px;
+
+              .form-group {
+                .arrow {
+                  right: 8px;
+                  position: absolute;
+                  top: calc(50% - 12px / 2);
+                }
+
+                .form-control {
+                  padding: 7px 25px 7px 15px;
+                  background-color: #fff;
+                  border-color: #d8d8d8;
+                  font-weight: 500;
+                }
+
+                .travellers {
+                  font-weight: 500;
+
+                  .dropdown-item {
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .planner {
+        flex: 1;
+        margin-right: 10px;
+
+        .title {
+          margin-bottom: 10px;
+        }
+
+        .activities {
+          height: 100%;
+          overflow-y: auto;
+
+          .activity {
+            background-color: #FFF9F1;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+
+            .header, .footer {
+              font-weight: bold;
+              font-size: 13px;
+              margin-bottom: 25px;
+              display: flex;
+              justify-content: space-between;
+
+              > div:first-child {
+                margin-right: 15px;
+              }
+            }
+
+            .persons {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+
+              .person {
+                width: 32px;
+                height: 32px;
+                padding: 5px;
+                background-color: #c2d1e7;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:nth-child(even) {
+                  background-color: #ffe6dc;
+                }
+
+                &:not(:first-child) {
+                  margin-left: -10px;
+                }
+              }
+            }
+
+            .hours {
+              font-weight: 500;
+            }
+          }
+
+          .driving {
+            padding: 10px 30px;
+            position: relative;
+            border-left: 1px dashed #e5e5e5;
+            margin-left: 3px;
+
+            .dot-line {
+              position: absolute;
+              left: -4px;
+              top: -4px;
+            }
+
+            .title {
+              font-size: 11px;
+            }
+          }
+
+          .icon {
+            color: #0C66F1;
+            background-color: #fff;
+          }
+        }
+      }
+
+      .details {
+        flex: 1;
+        padding: 0;
+
+        .body-wrap {
+          padding-right: 30px !important;
+        }
+
+        .breakup {
+          margin-bottom: 50px;
+
+          .title {
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: 14px;
+          }
+
+          .date-interval {
+            .time-row {
+              margin-bottom: 15px;
+
+              .picktime {
+                max-width: 120px;
+              }
+            }
+          }
+
+          .travellers-wrap {
+            padding-right: 6px;
+            border-bottom: 1px dashed #d8d8d8;
+          }
+
+          .traveller-line {
+            margin-bottom: 15px;
+            display: flex;
+            text-transform: capitalize;
+
+            > div:first-child {
+              flex-basis: 100px;
+            }
+
+            > div:last-child {
+              font-weight: 500;
+            }
+          }
+
+          .total {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 500;
+            padding: 6px 6px 0 0;
+          }
+        }
+
+        .btn-orange {
+          padding: 10px 20px;
+          width: auto;
+          font-weight: 500;
+          border-radius: 6px;
+        }
+
+        .programs-list {
+          height: 300px;
+          min-height: 150px;
+          max-height: 300px;
+          overflow-y: auto;
+        }
+
+        .form-group {
+          margin-bottom: 0;
+        }
+
+        .date-interval {
+          .arrival {
+            flex: 1;
+            margin-right: 20px;
+          }
+
+          .departure {
+            flex: 1;
+            margin: 0 20px;
+          }
+        }
+      }
+    }
+
+    .modal-footer {
+      display: none;
+    }
+
+    @media screen and (max-width: 991px) {
+      .modal-body {
+        display: block;
+
+        .details {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 25px;
+        }
+
+        .planner {
+          width: 100%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 525px) {
+      .modal-body {
+        .details {
+          .details-heading {
+            display: block;
+            text-align: center;
+
+            > div {
+              justify-content: center;
+            }
+          }
+
+          .time-slot, .date-interval {
+            display: block !important;
+
+            .arrival, .departure {
+              margin: 0 0 10px 0;
+            }
+          }
+        }
+
+        .planner .planner-content {
+
+        }
+      }
+    }
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #000;
+  }
+}

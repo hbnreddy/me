@@ -1,0 +1,265 @@
+.cover-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 25px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px 110px;
+  font-weight: bold;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(256, 256, 256, .3);
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: 700;
+  }
+
+  & > div {
+    z-index: 1;
+    width: 72%;
+  }
+
+  .next, .previous {
+    opacity: 0.7;
+    color: #444;
+    position: relative;
+    text-decoration: none;
+
+    .sign {
+      position: absolute;
+      width: 60px;
+      height: 30px;
+      top: calc(50% - 30px / 2);
+      display: flex;
+      align-items: center;
+      font-size: 8px;
+      color: #000;
+
+      .line {
+        width: 50px;
+        height: 2px;
+        background-color: #000;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  .next .sign {
+    right: -65px;
+  }
+
+  .previous .sign {
+    left: -65px;
+  }
+
+  .city {
+    font-size: 30px;
+  }
+
+  .country {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+}
+
+.city-page {
+  padding: 0 16px 80px;
+
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 20px;
+
+    .about {
+      flex: 2;
+      font-size: 14px;
+      color: #000;
+      margin-right: 20px;
+      margin-bottom: 10px;
+
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+
+      div {
+        width: 85%;
+      }
+    }
+
+    .weather-box {
+      flex: 1;
+      border: 1px solid #e6e6e6;
+      border-radius: 6px;
+      padding: 15px;
+      display: flex;
+
+      .best-time {
+        flex: 3;
+        border-right: 1px solid #e6e6e6;
+        padding-right: 15px;
+
+        .title {
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+
+        .months-list {
+          span {
+            margin-right: 10px;
+            padding: 2px 6px;
+
+            &.active, &:hover {
+              color: #0c66f1;
+              border-bottom: 1px solid #0c66f1;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .weather {
+        flex: 2;
+        padding-left: 15px;
+
+        .stats, .average {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 15px;
+          font-weight: bold;
+
+          .fa-tint {
+            color: #d5f4fe;
+          }
+        }
+
+        .average {
+          margin-bottom: 0;
+          font-size: 26px;
+
+          .image {
+            font-size: 44px;
+            color: #d5f4fe;
+          }
+        }
+      }
+    }
+  }
+
+  .planning {
+    padding-right: 0;
+    padding-left: 0;
+    border-bottom: none;
+    margin-bottom: 10px;
+
+    .planning-content {
+      .title {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  .themes {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 30px;
+
+    .list {
+      word-break: break-word;
+      flex: 5;
+      margin-right: 25px;
+
+      .theme {
+        text-decoration: none;
+        color: #333;
+        padding: 5px 0;
+
+        &.active {
+          color: #000;
+          font-size: 14px;
+        }
+
+        &::after {
+          content: ' \25CF';
+          font-size: 13px;
+          display: inline-block;
+          margin: 0 10px;
+        }
+
+        &:last-child::after {
+          display: none;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .toggle {
+      text-align: right;
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cover-image {
+    & > div {
+      width: auto;
+    }
+
+    .next, .previous {
+      .city, .country {
+        display: none;
+      }
+    }
+  }
+
+  .city-page {
+    padding: 0 0 20px;
+
+    .info {
+      display: block;
+
+      .about > div {
+        width: 100%;
+      }
+    }
+
+    .themes {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      margin-bottom: 20px;
+
+      .toggle {
+        margin-bottom: 10px;
+      }
+
+      .list {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.image-uploader {
+  img {
+    display: none !important;
+  }
+}

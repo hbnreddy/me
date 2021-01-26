@@ -1,0 +1,187 @@
+.coupon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .coupon-input {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-right: 8px;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 0 4px;
+
+    &.added {
+      background: #0c66f1;
+      color: #ffffff;
+    }
+  }
+
+  .coupon-btn {
+    font-weight: 600;
+    color: #dddddd;
+
+    &.plus {
+      color: #0c66f1;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.trip {
+  display: flex;
+  padding: 10px 10px 5px 10px;
+  align-items: center;
+  border-top: 1px dashed #e6e6e6;
+
+  .title {
+    flex-basis: 100px;
+  }
+
+  .trip-label {
+    display: flex;
+    flex-direction: column;
+
+    .departure, .arrival {
+      color: #000;
+
+      > div:first-child {
+        font-size: 16px;
+        color: #000;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .trip-time {
+    color: #6c757d;
+    font-size: 11px;
+
+    span {
+      font-size: 14px;
+      color: #000;
+    }
+  ;
+
+    .stops {
+      text-align: center;
+      text-transform: capitalize;
+      font-size: 11px;
+      color: #0c66f1;
+    }
+  }
+
+  .trip-type {
+    align-self: flex-start;
+    line-height: 1;
+
+    .badge {
+      padding: 2px;
+      color: #fff;
+      width: 28px;
+      margin-right: 6px;
+      border-radius: 2px;
+      text-transform: uppercase;
+
+      &.badge-r {
+        background-color: #46A23C;
+      }
+
+      &.badge-nr {
+        background-color: #DF5757;
+      }
+    }
+  }
+
+  .price-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    .price-item {
+      position: relative;
+      border: 1px solid #e6e6e6;
+      padding: 5px 15px;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      font-size: 13px;
+      cursor: pointer;
+      font-weight: 500;
+
+      .package {
+        font-size: 11px;
+      }
+
+      &:first-child {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.active {
+        color: #fff;
+        background-color: #0c66f1;
+      }
+
+      &.added {
+        color: #fff;
+        background-color: #46A23C;
+      }
+    }
+  }
+
+  &.plane {
+    .logo {
+      img {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin: 4px 0;
+      }
+    }
+  }
+
+  &.train {
+    justify-content: space-between;
+
+    .title {
+      font-weight: 500;
+      flex-basis: 150px;
+    }
+
+    .trip-time-wrap {
+      display: flex;
+      align-items: center;
+
+      .departure, .arrival {
+        font-size: 20px;
+        color: #0c66f1;
+        font-weight: 500;
+      }
+
+      .trip-time {
+        padding: 0 10px;
+        min-width: 150px;
+        text-align: center;
+
+        .icon {
+          font-size: 14px;
+          margin-right: 10px;
+        }
+
+        .stops {
+          border-top: 1px dashed #e6e6e6;
+          color: #000;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

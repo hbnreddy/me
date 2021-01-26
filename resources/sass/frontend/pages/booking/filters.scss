@@ -1,0 +1,352 @@
+.filter-wrap {
+  display: flex;
+  justify-content: space-between;
+
+  .filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 20px;
+
+    .dropdown {
+      margin-bottom: 3px;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.active {
+        .filter-item {
+          color: #0c66f1;
+          border-color: #0c66f1;
+        }
+      }
+
+      .dropdown-menu {
+        display: block;
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 10px;
+        width: 270px;
+        font-weight: 500;
+        margin-top: 5px;
+        border-color: #e6e6e6;
+        right:unset;
+        .heading {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 15px;
+
+          .close {
+            font-size: 17px;
+            cursor: pointer;
+          }
+        }
+
+        .body {
+          font-weight: normal;
+          max-height: 350px;
+          overflow-y: auto;
+          padding: 0 5px;
+
+          .custom-control-label {
+            &::after, &::before {
+              top: 0.3rem;
+            }
+          }
+
+          &.stops {
+            label {
+              font-weight: normal;
+              font-size: 14px;
+            }
+          }
+
+          label {
+            font-weight: 500;
+            cursor: pointer;
+          }
+
+          .custom-control {
+            padding-left: 1.7rem;
+          }
+
+          .type {
+            font-size: 12px;
+            margin-bottom: 5px;
+          }
+
+          .actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 28px;
+              height: 28px;
+              background-color: #E8F0FE;
+              color: #0c6ff1;
+              padding: 5px;
+              border-radius: 6px;
+              font-size: 18px;
+              font-weight: normal;
+              margin: 0 10px;
+              cursor: pointer;
+
+              &.disable {
+                background-color: #e6e6e6;
+                color: #ccc;
+              }
+            }
+          }
+
+          .hours-tabs {
+            margin-bottom: 10px;
+
+            .nav-link {
+              border-color: transparent;
+              border-bottom-color: #e6e6e6;
+              font-weight: 500;
+              color: #000;
+              text-align: center;
+
+              &.active {
+                color: #0c6ff1;
+                position: relative;
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  bottom: -1px;
+                  left: 0;
+                  width: 100%;
+                  height: 2px;
+                  background-color: #0c6ff1;
+                }
+              }
+            }
+          }
+
+          .collapse-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+
+            .toggle-collapse {
+              vertical-align: middle;
+              line-height: 0;
+              padding: 5px;
+              cursor: pointer;
+
+              &[aria-expanded="true"] {
+                transform: rotate(180deg);
+              }
+            }
+          }
+
+          &.train {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .train-filter-item {
+              text-transform: uppercase;
+              border: 1px solid #e6e6e6;
+              flex-basis: 20%;
+              text-align: center;
+              padding: 5px;
+              cursor: pointer;
+              font-size: .9rem;
+
+              &:last-child {
+                margin-top: 10px;
+                flex-basis: 100%;
+              }
+
+              &.active {
+                background-color: #0c6ff1;
+                color: #fff;
+              }
+            }
+          }
+
+          &.facilities {
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            .facility {
+              flex: calc(50% - 12px / 2);
+              margin: 0 3px 6px;
+              padding: 5px 10px;
+              border: 1px solid #e6e6e6;
+              border-radius: 4px;
+              cursor: pointer;
+              color: #6c757d;
+
+              &.active {
+                background-color: #E8F0FE;
+                border: 1px solid #E8F0FE;
+                color: #0c6ff1;
+              }
+
+              &:focus {
+                border-color: #0c6ff1;
+              }
+            }
+          }
+        }
+
+        &.sliders {
+          padding-left: 0;
+          padding-right: 0;
+
+          .heading {
+            padding: 0 10px;
+          }
+
+          .body {
+            padding: 0;
+            overflow: unset;
+
+            .slider-content {
+              padding: 5px 15px;
+
+              .slider-wrap {
+                padding: 0;
+              }
+
+              label {
+                font-size: 13px;
+                font-weight: normal;
+
+                .icon {
+                  color: #6c757d;
+                  margin-right: 6px;
+                  border-bottom: 1px solid #6c757d;
+                }
+              }
+
+              .route {
+                font-size: 15px;
+              }
+
+              .slider-wrap {
+                .vue-slider-dot-tooltip-top {
+                  top: -3px;
+                }
+
+                .vue-slider-rail {
+                  background-color: #DADCE0;
+                }
+
+                .vue-slider-dot {
+                  .vue-slider-dot-handle {
+                    background-color: #0c6ff1;
+                  }
+
+                  .expanded-tooltip-text {
+                    display: none;
+                  }
+
+                  &.vue-slider-dot-focus {
+                    .vue-slider-dot-handle-focus {
+                      box-shadow: 0 0 0 10px rgba(66, 133, 244, .1);
+                      transform: scale(1.3);
+                    }
+
+                    .expanded-tooltip-text {
+                      display: block;
+                    }
+                  }
+                }
+
+                .vue-slider-dot-tooltip-inner {
+                  background-color: #0c6ff1;
+                  font-size: 11px;
+
+                  &::after {
+                    border-top-color: #0c6ff1;
+                  }
+                }
+
+                .vue-slider-process {
+                  background-color: #0c6ff1;
+                }
+
+                &.rating {
+                  padding: 25px 0 0;
+
+                  .vue-slider-rail {
+                    background-color: #F6B500;
+                  }
+
+                  .vue-slider-dot-handle {
+                    background-color: #F6B500;
+                    border: 2px solid #fff;
+                    box-shadow: none;
+                  }
+
+                  .vue-slider-dot-tooltip-inner {
+                    background-color: #F6B500;
+                    font-size: 13px;
+                    font-weight: 500;
+
+                    &::after {
+                      border-top-color: #F6B500;
+                    }
+
+                    .vue-slider-dot-tooltip-text {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    }
+                  }
+
+                  .vue-slider-process {
+                    background-color: #DADCE0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .filter-item {
+      border: 1px solid #e6e6e6;
+      text-transform: capitalize;
+      border-radius: 6px 6px 0 0;
+      min-width: 95px;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.1;
+      position: relative;
+      padding-right: 20px;
+      cursor: pointer;
+
+      &::after {
+        position: absolute;
+        right: 10px;
+        top: calc(50% - 12px / 2);
+        content: '\f107';
+        font-family: 'FontAwesome', sans-serif;
+        border-top: none;
+      }
+    }
+  }
+
+  .filters {
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+    flex-basis: 100px;
+  }
+}

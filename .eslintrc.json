@@ -1,0 +1,123 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/recommended"
+    ],
+    "plugins": [
+        "vue"
+    ],
+    "parserOptions": {
+        "parser": "babel-eslint"
+    },
+    "rules": {
+        "no-empty-pattern": "off",
+        "vue/no-use-v-if-with-v-for": 0,
+        "comma-dangle": ["error", "never"],
+        "vue/no-unused-vars": "error",
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single",
+            {
+                "allowTemplateLiterals": true
+            }
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "space-before-function-paren": ["error", {
+            "anonymous": "always",
+            "named": "always",
+            "asyncArrow": "always"
+        }],
+        "vue/html-closing-bracket-newline": ["error", {
+            "singleline": "never",
+            "multiline": "always"
+        }],
+        "vue/max-attributes-per-line": ["error", {
+            "singleline": 2,
+            "multiline": {
+                "max": 8,
+                "allowFirstLine": false
+            }
+        }],
+        "object-curly-newline": ["error", {
+            "ObjectExpression": "always",
+            "ObjectPattern": { "multiline": true },
+            "ImportDeclaration": "never",
+            "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+        }],
+        "newline-per-chained-call": [
+            "error",
+            {
+                "ignoreChainWithDepth": 2
+            }
+        ],
+        "padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "return"
+            }
+        ],
+        "no-unused-vars": "warn",
+        "object-property-newline": "error",
+        "lines-between-class-members": ["error", "always"],
+        "newline-before-return": "error",
+        "vue/require-prop-type-constructor": 0,
+        "vue/no-parsing-error": ["error", {
+            "abrupt-closing-of-empty-comment": true,
+            "absence-of-digits-in-numeric-character-reference": true,
+            "cdata-in-html-content": true,
+            "character-reference-outside-unicode-range": true,
+            "control-character-in-input-stream": true,
+            "control-character-reference": true,
+            "eof-before-tag-name": true,
+            "eof-in-cdata": true,
+            "eof-in-comment": true,
+            "eof-in-tag": true,
+            "incorrectly-closed-comment": true,
+            "incorrectly-opened-comment": true,
+            "invalid-first-character-of-tag-name": true,
+            "missing-attribute-value": true,
+            "missing-end-tag-name": true,
+            "missing-semicolon-after-character-reference": true,
+            "missing-whitespace-between-attributes": true,
+            "nested-comment": true,
+            "noncharacter-character-reference": true,
+            "noncharacter-in-input-stream": true,
+            "null-character-reference": true,
+            "surrogate-character-reference": true,
+            "surrogate-in-input-stream": true,
+            "unexpected-character-in-attribute-name": true,
+            "unexpected-character-in-unquoted-attribute-value": true,
+            "unexpected-equals-sign-before-attribute-name": true,
+            "unexpected-null-character": true,
+            "unexpected-question-mark-instead-of-tag-name": true,
+            "unexpected-solidus-in-tag": true,
+            "unknown-named-character-reference": true,
+            "end-tag-with-attributes": true,
+            "duplicate-attribute": true,
+            "end-tag-with-trailing-solidus": true,
+            "non-void-html-element-start-tag-with-trailing-solidus": false,
+            "x-invalid-end-tag": true,
+            "x-invalid-namespace": true
+        }]
+    }
+}

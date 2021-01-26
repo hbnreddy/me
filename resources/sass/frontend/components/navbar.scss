@@ -1,0 +1,134 @@
+@import "./search-input-box";
+
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .notification-area {
+    position: relative;
+
+    .notification-circle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      top: -10px;
+      font-size: 11px;
+      right: -16px;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      border-radius: 50%;
+      background-color: #FD753B;
+    }
+  }
+
+  .nav-item {
+    padding: 0.5rem 1rem;
+
+    .nav-link {
+      padding: 0 2px;
+      position: relative;
+      color: #fff;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    &:hover, &.active {
+      .nav-link:after {
+        content: '';
+        position: absolute;
+        background-color: #0c66f1;
+        height: 2px;
+        width: 100%;
+        border-radius: 20px;
+        bottom: -5px;
+        left: 0;
+      }
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &.explore-navbar {
+    border-bottom: 1px solid #ced4da;
+
+    .nav-item .nav-link {
+      color: #000;
+    }
+
+    .form-inline {
+      .form-group {
+        position: relative;
+      }
+
+      .form-control {
+        border-color: #eee;
+
+        &:focus, &:active {
+          box-shadow: none;
+          border-color: #eee;
+        }
+
+        &::placeholder {
+          color: #abbdcd;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navbar.explore-navbar {
+    .form-inline {
+      padding-top: 15px;
+      flex-wrap: nowrap;
+
+      .form-control, .search-input-box {
+        width: 175px;
+        margin-right: 0 !important;
+      }
+
+      .form-control:not(.input-city), .search-input-box {
+        margin-right: 8px !important;
+      }
+
+      > div:last-child .form-control {
+        margin-right: 0 !important;
+      }
+    }
+
+    .nav-item .nav-link {
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .navbar.explore-navbar {
+    .form-inline {
+      flex-wrap: wrap;
+
+      > div, .form-control, .search-input-box {
+        width: 100%;
+      }
+
+      > div {
+        margin-bottom: 10px;
+      }
+
+      .search-input-box {
+        margin-right: 0 !important;
+
+        .form-group {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
