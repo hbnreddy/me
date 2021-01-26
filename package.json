@@ -3,9 +3,11 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
+        "prod": "npm run production",
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build"
     },
+    
     "dependencies": {
         "autoprefixer": "^8.6.4",
         "axios": "^0.21.1",
