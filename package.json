@@ -1,6 +1,4 @@
 {
-    "name": "rutugo1",
-    "version": "0.1.0",
     "private": true,
     "scripts": {
         "dev": "npm run development",
@@ -11,8 +9,6 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "eslint": "./node_modules/.bin/eslint resources/assets/js/ test/ --ext .js,.vue"
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build"
     },
     
     "dependencies": {
